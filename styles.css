@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.moon-and-stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('./background.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.snowflakes {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.snowflake {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('./snowflake.webp') no-repeat center center;
+    background-size: cover;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
